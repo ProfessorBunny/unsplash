@@ -1,9 +1,12 @@
+import { useGlobalContext } from "./context";
+
 const SearchGallery = () => {
+  const { setSearchValue } = useGlobalContext();
   const submitHandler = (e) => {
     e.preventDefault();
     const searchValue = e.target.elements.search.value;
     if (!searchValue) return;
-    console.log(searchValue);
+    setSearchValue(searchValue);
   };
   return (
     <section>

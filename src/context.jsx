@@ -1,6 +1,11 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
-const AppContext = createContext();
+const AppContext = createContext({
+  isDarkTheme: false,
+  toggleDarkTheme: () => {},
+  searchValue: "messi",
+  setSearchValue: () => {},
+});
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);

@@ -40,7 +40,7 @@ const Gallery = () => {
       </section>
     );
   }
-  console.log(results);
+
   return (
     <section className="image-container">
       {results.map((item) => {
