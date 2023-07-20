@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useGlobalContext } from "./context";
 import axios from "axios";
 const url =
-  "https://api.unsplash.com/search/photos?client_id=rbzaN_8QdHWEy_qK7RV3heqKTVRf7yzkFYu9ZG5Kp7M&query=cat";
+  "https://api.unsplash.com/search/photos?client_id=rbzaN_8QdHWEy_qK7RV3heqKTVRf7yzkFYu9ZG5Kp7M&query=football";
 const Gallery = () => {
   const response = useQuery({
     queryKey: ["images"],
@@ -23,8 +23,8 @@ const Gallery = () => {
   if (response.isError) {
     return (
       <section className="image-container">
-        <h3>Sorry!</h3>
-        <h4>Can't proces your request at the moment :(</h4>
+        {/* <h3>Sorry!</h3> */}
+        <h4>Can't proces your request at the moment</h4>
       </section>
     );
   }
@@ -34,7 +34,8 @@ const Gallery = () => {
     return (
       <section className="image-container">
         <h3>No result Found!</h3>
-        <h4>Try a different value</h4>
+
+        {/* <h4>Try a different value</h4> */}
       </section>
     );
   }
@@ -42,7 +43,7 @@ const Gallery = () => {
   return (
     <section className="image-container">
       {results.map((item) => {
-        const url = item?.urls?.full;
+        const url = item?.urls?.regular;
         return (
           <img
             src={url}
