@@ -1,6 +1,8 @@
 const SearchGallery = () => {
   return (
-    <h2>SearchGallery</h2>
-  )
-}
-export default SearchGallery
+    <section>
+      <h1 className="title">Unsplash</h1>
+    </section>
+  );
+};
+export default SearchGallery;

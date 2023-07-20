@@ -1,6 +1,6 @@
 import { useGlobalContext } from "./context";
 
 const Gallery = () => {
-  return <h2>Gallery</h2>;
+  return <h2></h2>;
 };
 export default Gallery;

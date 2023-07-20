@@ -6,8 +6,9 @@ const App = () => {
   return (
     <main>
       <ThemeToggle />
-      <Gallery />
+
       <SearchGallery />
+      <Gallery />
     </main>
   );
 };
