@@ -3,13 +3,13 @@ import { createContext, useContext, useState, useEffect } from "react";
 const AppContext = createContext({
   isDarkTheme: false,
   toggleDarkTheme: () => {},
-  searchValue: "messi",
+  searchValue: "football",
   setSearchValue: () => {},
 });
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const [searchValue, setSearchValue] = useState("messi");
+  const [searchValue, setSearchValue] = useState("football");
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
     setIsDarkTheme(newDarkTheme);
