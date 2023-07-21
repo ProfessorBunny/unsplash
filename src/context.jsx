@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const AppContext = createContext({
   isDarkTheme: false,
   toggleDarkTheme: () => {},
-  searchValue: "football  ",
+  searchValue: "football",
   setSearchValue: () => {},
 });
 
@@ -11,18 +11,25 @@ const getBrowserSetMode = () => {
   const defaultBrowserMode = window.matchMedia(
     "(prefers-color-scheme:dark)"
   ).matches;
-  console.log(defaultBrowserMode);
-  return defaultBrowserMode;
+
+  // const storedThemeIsDark = localStorage.getItem("storedTheme");
+  // if (storedThemeIsDark === null) {
+  //   return defaultBrowserMode;
+  // }
+  // if (storedThemeIsDark !== null) {
+  //   return storedThemeIsDark === "true";
+  // }
 };
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(getBrowserSetMode());
   const [searchValue, setSearchValue] = useState("football");
   const toggleDarkTheme = () => {
-    setIsDarkTheme((prevstate) => {
-      return !prevstate;
-    });
+    const newDarkTheme = !isDarkTheme;
+    setIsDarkTheme(newDarkTheme);
+    localStorage.setItem("storedTheme", newDarkTheme);
   };
+
   useEffect(() => {
     // const body = document.querySelector("body");
     // body.classList.toggle("dark-theme", isDarkTheme);
