@@ -12,13 +12,13 @@ const getBrowserSetMode = () => {
     "(prefers-color-scheme:dark)"
   ).matches;
 
-  // const storedThemeIsDark = localStorage.getItem("storedTheme");
-  // if (storedThemeIsDark === null) {
-  //   return defaultBrowserMode;
-  // }
-  // if (storedThemeIsDark !== null) {
-  //   return storedThemeIsDark === "true";
-  // }
+  const storedThemeIsDark = localStorage.getItem("storedTheme");
+  if (storedThemeIsDark === null) {
+    return defaultBrowserMode;
+  }
+  if (storedThemeIsDark !== null) {
+    return storedThemeIsDark === "true";
+  }
 };
 
 export const AppProvider = ({ children }) => {
