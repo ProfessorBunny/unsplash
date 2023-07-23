@@ -1,7 +1,77 @@
-#### Setup
+# React Unsplash Image Search App
 
-- npm install
-- npm run dev
+![React Unsplash Image Search App](app_screenshot.png)
+
+This is a React app built using Vite that allows users to search for images using the Unsplash API. The app utilizes React Query to efficiently fetch, render, and manipulate data from the server directly in the React app. By leveraging the React Query cache, rendering data on the frontend becomes faster and more responsive. Additionally, the app provides a feature that enables users to switch between light mode and dark mode based on their preference.
+
+## Features
+
+- Search for Images: Users can enter keywords in the search bar to find images related to their search terms.
+- React Query Integration: Data fetching and caching are managed using React Query, resulting in faster rendering and better performance.
+- Light Mode / Dark Mode: Users can switch between light mode and dark mode based on their preference, providing a more personalized user experience.
+
+## Technologies Used
+
+- React: A JavaScript library for building user interfaces.
+- Vite: A fast build tool and development server for modern web applications.
+- Unsplash API: A powerful API for searching and accessing high-quality images from Unsplash.
+- React Query: A data-fetching library for React that optimizes server state synchronization.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js and npm must be installed on your system.
+
+### Installation
+
+1. Clone the repository to your local machine using the following command:
+
+```
+git clone https://github.com/your-username/react-unsplash-image-search.git
+```
+
+2. Navigate to the project directory:
+
+```
+cd react-unsplash-image-search
+```
+
+3. Install the dependencies:
+
+```
+npm install
+```
+
+### Configuration
+
+To use the Unsplash API, you need to obtain an API key. Follow these steps to get your API key:
+
+1. Visit the [Unsplash Developer](https://unsplash.com/developers) website.
+2. Sign in or create a new account.
+3. Create a new application to get your API key.
+
+### Usage
+
+1. Open the project in your preferred code editor.
+
+2. In the project directory, create a new file named `.env` and add the following line, replacing `YOUR_API_KEY` with the API key you obtained from Unsplash:
+
+```
+VITE_UNSPLASH_API_KEY=YOUR_API_KEY
+```
+
+3. Start the development server:
+
+```
+npm run dev
+```
+
+4. The app will be accessible at `http://localhost:3000`. Open this URL in your web browser.
+
+5. You can now use the app to search for images and enjoy the light/dark mode feature.
 
 #### Dark Theme - CSS
 
