@@ -67,7 +67,7 @@ VITE_UNSPLASH_API_KEY=YOUR_API_KEY
 npm run dev
 ```
 
-4. The app will be accessible at `http://localhost:3000`. Open this URL in your web browser.
+4. The app will be accessible at `http://localhost:5173`. Open this URL in your web browser.
 
 5. You can now use the app to search for images and enjoy the light/dark mode feature.
 
